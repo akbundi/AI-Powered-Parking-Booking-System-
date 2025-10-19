@@ -20,7 +20,103 @@ import ContactUs from "@/pages/ContactUs";
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
 
-function App() {
+const Footer = () => {
+  return (
+    <footer className="bg-gray-900 text-white mt-16">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* Company Info */}
+          <div>
+            <div className="flex items-center gap-2 mb-4">
+              <Car className="w-6 h-6" />
+              <h3 className="text-xl font-bold">MyParkingService</h3>
+            </div>
+            <p className="text-gray-400 text-sm">
+              Your trusted partner for finding and booking parking spots across India. Quick, easy, and secure.
+            </p>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="font-semibold mb-4">Quick Links</h4>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link to="/" className="text-gray-400 hover:text-white transition-colors">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-gray-400 hover:text-white transition-colors">
+                  Contact Us
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <h4 className="font-semibold mb-4">Legal</h4>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link to="/terms" className="text-gray-400 hover:text-white transition-colors">
+                  Terms & Conditions
+                </Link>
+              </li>
+              <li>
+                <Link to="/cancellation" className="text-gray-400 hover:text-white transition-colors">
+                  Cancellation & Refunds
+                </Link>
+              </li>
+              <li>
+                <Link to="/shipping" className="text-gray-400 hover:text-white transition-colors">
+                  Shipping Policy
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h4 className="font-semibold mb-4">Contact</h4>
+            <ul className="space-y-2 text-sm text-gray-400">
+              <li>Bundi, Rajasthan, India</li>
+              <li>
+                <a href="mailto:abhinavnew16@gmail.com" className="hover:text-white transition-colors">
+                  abhinavnew16@gmail.com
+                </a>
+              </li>
+            </ul>
+            <div className="flex gap-4 mt-4">
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Twitter className="w-5 h-5" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Linkedin className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+          <p>&copy; {new Date().getFullYear()} MyParkingService. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+function HomePage() {
   const [parkingSpots, setParkingSpots] = useState([]);
   const [loading, setLoading] = useState(false);
   const [area, setArea] = useState("");
