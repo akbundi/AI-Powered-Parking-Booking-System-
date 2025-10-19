@@ -1,15 +1,21 @@
 import { useState, useEffect } from "react";
 import "@/App.css";
 import axios from "axios";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
-import { MapPin, Navigation, Search, Clock, DollarSign, Car } from "lucide-react";
+import { MapPin, Navigation, Search, Clock, DollarSign, Car, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { Toaster } from "@/components/ui/toaster";
+import CancellationRefunds from "@/pages/CancellationRefunds";
+import TermsConditions from "@/pages/TermsConditions";
+import Shipping from "@/pages/Shipping";
+import Privacy from "@/pages/Privacy";
+import ContactUs from "@/pages/ContactUs";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
