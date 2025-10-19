@@ -157,10 +157,9 @@ async def get_all_parking():
 @api_router.post("/parking/seed")
 async def seed_parking_data():
     """Seed sample parking data"""
-    # Check if data already exists
-    existing = await db.parking_spots.count_documents({})
-    if existing > 0:
-        return {"message": "Database already seeded", "count": existing}
+    # Clear existing data to allow reseeding
+    await db.parking_spots.delete_many({})
+    existing = 0
     
     sample_data = [
         # Kota, Rajasthan, India
