@@ -163,6 +163,142 @@ async def seed_parking_data():
         return {"message": "Database already seeded", "count": existing}
     
     sample_data = [
+        # Kota, Rajasthan, India
+        {
+            "name": "Electricity Board Area Parking",
+            "address": "Near Power House, Electricity Board Area",
+            "area": "Electricity Board Area",
+            "city": "Kota",
+            "latitude": 25.1826,
+            "longitude": 75.8368,
+            "price": 20.0,
+            "availability": True,
+            "operating_hours": "24/7",
+            "type": "street"
+        },
+        {
+            "name": "Power House Multi-Level Parking",
+            "address": "Electricity Board Complex",
+            "area": "Electricity Board Area",
+            "city": "Kota",
+            "latitude": 25.1830,
+            "longitude": 75.8375,
+            "price": 30.0,
+            "availability": True,
+            "operating_hours": "6:00 AM - 10:00 PM",
+            "type": "garage"
+        },
+        {
+            "name": "Industrial Area Parking Zone",
+            "address": "Industrial Area Road",
+            "area": "Electricity Board Area",
+            "city": "Kota",
+            "latitude": 25.1820,
+            "longitude": 75.8360,
+            "price": 15.0,
+            "availability": False,
+            "operating_hours": "24/7",
+            "type": "street"
+        },
+        {
+            "name": "Chambal Garden Parking",
+            "address": "Near Chambal Garden",
+            "area": "Amar Colony",
+            "city": "Kota",
+            "latitude": 25.1460,
+            "longitude": 75.8572,
+            "price": 10.0,
+            "availability": True,
+            "operating_hours": "5:00 AM - 10:00 PM",
+            "type": "street"
+        },
+        {
+            "name": "Seven Wonders Park Parking",
+            "address": "Kishore Sagar Lake Road",
+            "area": "Civil Lines",
+            "city": "Kota",
+            "latitude": 25.1831,
+            "longitude": 75.8347,
+            "price": 20.0,
+            "availability": True,
+            "operating_hours": "8:00 AM - 8:00 PM",
+            "type": "garage"
+        },
+        # Jaipur, Rajasthan
+        {
+            "name": "Pink City Parking Plaza",
+            "address": "MI Road",
+            "area": "Jaipur City Center",
+            "city": "Jaipur",
+            "latitude": 26.9124,
+            "longitude": 75.7873,
+            "price": 25.0,
+            "availability": True,
+            "operating_hours": "24/7",
+            "type": "garage"
+        },
+        {
+            "name": "Hawa Mahal Street Parking",
+            "address": "Near Hawa Mahal",
+            "area": "Old City",
+            "city": "Jaipur",
+            "latitude": 26.9239,
+            "longitude": 75.8267,
+            "price": 15.0,
+            "availability": True,
+            "operating_hours": "6:00 AM - 11:00 PM",
+            "type": "street"
+        },
+        # Delhi
+        {
+            "name": "Connaught Place Parking",
+            "address": "Block A, Connaught Place",
+            "area": "Connaught Place",
+            "city": "Delhi",
+            "latitude": 28.6315,
+            "longitude": 77.2167,
+            "price": 40.0,
+            "availability": True,
+            "operating_hours": "24/7",
+            "type": "garage"
+        },
+        {
+            "name": "India Gate Parking Area",
+            "address": "Rajpath",
+            "area": "Central Delhi",
+            "city": "Delhi",
+            "latitude": 28.6129,
+            "longitude": 77.2295,
+            "price": 30.0,
+            "availability": True,
+            "operating_hours": "24/7",
+            "type": "street"
+        },
+        # Mumbai
+        {
+            "name": "Gateway of India Parking",
+            "address": "Apollo Bunder",
+            "area": "Colaba",
+            "city": "Mumbai",
+            "latitude": 18.9220,
+            "longitude": 72.8347,
+            "price": 50.0,
+            "availability": False,
+            "operating_hours": "24/7",
+            "type": "garage"
+        },
+        {
+            "name": "Marine Drive Parking Zone",
+            "address": "Marine Drive",
+            "area": "South Mumbai",
+            "city": "Mumbai",
+            "latitude": 18.9432,
+            "longitude": 72.8236,
+            "price": 35.0,
+            "availability": True,
+            "operating_hours": "24/7",
+            "type": "street"
+        },
         # New York
         {
             "name": "Times Square Parking Garage",
