@@ -368,7 +368,7 @@ function HomePage() {
                     
                     <div className="flex items-center gap-2 text-sm">
                       <DollarSign className="w-4 h-4 text-green-600" />
-                      <span className="text-gray-700">${spot.price}/hour</span>
+                      <span className="text-gray-700">₹{spot.price}/hour</span>
                     </div>
                     
                     <div className="flex items-center gap-2 text-sm">
@@ -394,7 +394,24 @@ function HomePage() {
           </div>
         )}
       </main>
+
+      <Footer />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/cancellation" element={<CancellationRefunds />} />
+        <Route path="/terms" element={<TermsConditions />} />
+        <Route path="/shipping" element={<Shipping />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/contact" element={<ContactUs />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
