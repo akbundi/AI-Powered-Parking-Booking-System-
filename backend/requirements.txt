@@ -69,3 +69,5 @@ urllib3==2.5.0
 uvicorn==0.25.0
 watchfiles==1.1.0
 gunicorn 
+npm install 
+npm run build
