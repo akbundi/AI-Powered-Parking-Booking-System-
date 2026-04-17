@@ -19,9 +19,7 @@ import ContactUs from "@/pages/ContactUs";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}`;
-axios.get(`${API}/parking/search`, {
-  params: { area, city }
-});
+
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white mt-16">
