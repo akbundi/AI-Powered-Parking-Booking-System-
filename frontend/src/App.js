@@ -202,6 +202,7 @@ function HomePage() {
 
     setLoading(true);
     try {
+      console.log("Final URL:", `${API}/parking/search`);
       const response = await axios.get(`${API}/parking/search`, {
         params: { area, city },
       });
